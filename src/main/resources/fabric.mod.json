@@ -3,8 +3,8 @@
   "id": "dontuntogglesprint",
   "version": "${version}",
   "name": "DontUntoggleSprint",
-  "description": "",
-  "authors": [],
+  "description": "Prevents sprint turning off on death",
+  "authors": ["whimsicalities"],
   "contact": {
     "repo": "https://github.com/kapra/DontUntoggleSprint"
   },
