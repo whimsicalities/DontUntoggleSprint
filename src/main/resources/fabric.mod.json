@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "dontuntogglesprint",
+  "version": "${version}",
+  "name": "DontUntoggleSprint",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/kapra/DontUntoggleSprint"
+  },
+  "license": "LGPL-3.0",
+  "icon": "assets/dontuntogglesprint/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "io.github.whimsicalities.dontuntogglesprint.DontUntoggleSprint"
+    ]
+  },
+  "mixins": [
+    "dontuntogglesprint.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
