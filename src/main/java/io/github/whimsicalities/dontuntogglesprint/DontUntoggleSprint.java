@@ -2,9 +2,12 @@ package io.github.whimsicalities.dontuntogglesprint;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.swing.text.JTextComponent;
 
 public class DontUntoggleSprint implements ModInitializer {
 
@@ -19,7 +22,8 @@ public class DontUntoggleSprint implements ModInitializer {
                     sprintToggledOnLastDeath = false;
                     LOGGER.info("Setting sprint back to false!!!!!"); //todo remove this
                 } else {
-                    client.player.setSprinting(true);
+                    //client.player.setSprinting(true);
+                    KeyMapping.set(client.options.keySprint.getDefaultKey(), true);
                     LOGGER.info("Setting sprint to true!!!!!"); //todo remove this
                 }
             }
