@@ -12,8 +12,8 @@
   "icon": "assets/dontuntogglesprint/icon.png",
   "environment": "client",
   "entrypoints": {
-    "main": [
-      "io.github.whimsicalities.dontuntogglesprint.DontUntoggleSprint"
+    "client": [
+      "io.github.whimsicalities.dontuntogglesprint.client.DontUntoggleSprintClient"
     ]
   },
   "mixins": [

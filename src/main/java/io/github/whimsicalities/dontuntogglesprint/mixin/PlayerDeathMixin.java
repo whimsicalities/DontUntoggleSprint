@@ -1,7 +1,7 @@
 package io.github.whimsicalities.dontuntogglesprint.mixin;
 
 import com.mojang.authlib.GameProfile;
-import io.github.whimsicalities.dontuntogglesprint.DontUntoggleSprint;
+import io.github.whimsicalities.dontuntogglesprint.client.DontUntoggleSprintClient;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.player.LocalPlayer;
@@ -19,7 +19,7 @@ public abstract class PlayerDeathMixin extends AbstractClientPlayer {
     @Inject(at = @At("TAIL"), method = "hurtTo")
     protected void hurtTo(float health, CallbackInfo ci) {
         if (this.getHealth() <= 0) {
-            DontUntoggleSprint.handleDeath();
+            DontUntoggleSprintClient.handleDeath();
         }
     }
 }
