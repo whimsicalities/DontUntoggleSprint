@@ -24,7 +24,7 @@ public class DontUntoggleSprintClient implements ClientModInitializer {
                 if (client.player.isSprinting()) {
                     sprintToggledOnLastDeath = false;
                 } else {
-                    KeyMapping.set(client.options.keySprint.getDefaultKey(), true);
+                    client.options.keySprint.setDown(true);
                 }
             }
         });
