@@ -6,7 +6,8 @@
   "mixins": [
   ],
   "client": [
-    "ResetToggleMixin"
+    "ResetToggleMixinHead",
+    "ResetToggleMixinTail"
   ],
   "injectors": {
     "defaultRequire": 1
