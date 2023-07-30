@@ -4,6 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 
@@ -24,7 +25,7 @@ public class DontUntoggleSprintClient implements ClientModInitializer {
                 if (client.player.isSprinting()) {
                     sprintToggledOnLastDeath = false;
                 } else {
-                    KeyMapping.set(client.options.keySprint.getDefaultKey(), true);
+                    KeyMapping.set(KeyBindingHelper.getBoundKeyOf(client.options.keySprint), true);
                 }
             }
         });
